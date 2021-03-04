@@ -11,7 +11,7 @@ class FileUtils(private var context: Context) {
     fun upload(userId: String, photoId: String, inPath: String): String {
 
         val cw = ContextWrapper(context)
-        val directory = cw.getDir("imageDir/$userId", Context.MODE_PRIVATE)
+        val directory = cw.getDir("imageDir", Context.MODE_PRIVATE)
         val mypath = File(directory, photoId)
 
         try {
