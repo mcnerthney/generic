@@ -1,5 +1,6 @@
 package com.softllc.app.ui.bottomnavigation
 
+import android.annotation.SuppressLint
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -81,6 +82,7 @@ class BottomNavigationFragment : Fragment () {
 
     private lateinit var controller: NavController // don't forget to initialize
 
+    @SuppressLint("RestrictedApi")
     private val listener = NavController.OnDestinationChangedListener { controller, destination, arguments ->
         // react on change
         Timber.d("OnDestinationChangedListener$destination")
