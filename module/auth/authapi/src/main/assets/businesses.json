@@ -1,0 +1,10 @@
+[
+  {
+    "businessId": "abc",
+    "name": "Blue Retailer"
+  },
+  {
+    "businessId": "abc-test",
+    "name": "Brand Blue Test"
+  }
+]

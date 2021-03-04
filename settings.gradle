@@ -1,0 +1,9 @@
+include ':module:photocache'
+include ':module:dashboard:home'
+include ':core:apibase'
+include ':core:base'
+include ':module:auth:authui'
+include ':module:auth:authapi'
+include ':core:uibase'
+include ':app'
+rootProject.name = "app"

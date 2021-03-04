@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/freeze_fragment_root"
+            app:startDestination="@+id/freeze_fragment">
+
+    <fragment
+            android:id="@+id/freeze_fragment"
+            android:name="com.softllc.photocache.FreezeFragment"
+           >
+    <action
+            android:id="@+id/action_freeze_fragment_to_photo_fragment"
+            app:destination="@id/photo_fragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+    <fragment
+            android:id="@+id/photo_fragment"
+            android:name="com.softllc.photocache.PhotoFragment"
+            tools:layout="@layout/fragment_photo">
+        <argument
+                android:name="photoId"
+                app:argType="string" />
+
+           <action
+                android:id="@+id/action_photo_fragment_next"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:launchSingleTop="true"
+                app:destination="@+id/photo_fragment"/>
+
+        <action
+                android:id="@+id/action_photo_fragment_prev"
+                app:enterAnim="@anim/slide_in_left"
+                app:exitAnim="@anim/slide_out_right"
+                app:launchSingleTop="true"
+                app:destination="@+id/photo_fragment"/>
+
+    </fragment>
+
+ </navigation>
