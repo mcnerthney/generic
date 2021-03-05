@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import timber.log.Timber
+import javax.inject.Singleton
 
 class AuthFirebaseServiceImpl : AuthService() {
 

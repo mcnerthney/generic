@@ -31,6 +31,7 @@ class AuthModule {
 //    }
 
    // @AuthFirebaseService
+    @Singleton
     @Provides
     fun provideAuthServiceFirebase(@ApplicationContext context: Context): AuthService {
         return AuthFirebaseServiceImpl()
